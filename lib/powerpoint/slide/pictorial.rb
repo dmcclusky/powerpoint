@@ -4,7 +4,7 @@ require 'fileutils'
 module Powerpoint
   module Slide
     class Powerpoint::Slide::Pictorial
-      def initialize extract_path, title, image_path, slide_number, coords={}
+      def initialize extract_path, image_path, slide_number, coords={}
       	
       	image_name = File.basename(image_path)
       	FileUtils.copy_file(image_path, "#{extract_path}/ppt/media/#{image_name}")
@@ -42,29 +42,6 @@ module Powerpoint
 					                    <a:chExt cx="0" cy="0" />
 					                </a:xfrm>
 					            </p:grpSpPr>
-					            <p:sp>
-					                <p:nvSpPr>
-					                    <p:cNvPr id="2" name="Title 1" />
-					                    <p:cNvSpPr>
-					                        <a:spLocks noGrp="1" />
-					                    </p:cNvSpPr>
-					                    <p:nvPr>
-					                        <p:ph type="title" />
-					                    </p:nvPr>
-					                </p:nvSpPr>
-					                <p:spPr />
-					                <p:txBody>
-					                    <a:bodyPr />
-					                    <a:lstStyle />
-					                    <a:p>
-					                        <a:r>
-					                            <a:rPr lang="en-US" dirty="0" smtClean="0" />
-					                            <a:t>' + title + '</a:t>
-					                        </a:r>
-					                        <a:endParaRPr lang="en-US" dirty="0" />
-					                    </a:p>
-					                </p:txBody>
-					            </p:sp>
 					            <p:pic>
 					                <p:nvPicPr>
 					                    <p:cNvPr id="4" name="Content Placeholder 3" />
